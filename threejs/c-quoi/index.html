@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../global/global.css" />
+    <title>Ques ce que ThreeJS ? - Thyo's Journey</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Qu'est-ce que ThreeJs ?</h1>
+      <span>Par <a href="https://github.com/WhoamiUnderscore">Theo Derive</a></span>
+    </header>
+
+    <main>
+      <section>
+        <h3>Introduction:</h3>
+
+        <p>Pour résumer, ThreeJS est une librairie qui permet de manipuler de la 3D dans un navigateur web grâce au JavaScript. On en voit de plus en plus sur les sites internet, rendant l'expérience de l'utilisateur plus pertinente et plus agréable.</p>
+        <br/>
+        <p>Mais comment est-il possible qu'un moteur graphique ( parce que c'est ce que c'est), qui est compilé sur un moteur de recherche qui est lui-même compilé par votre PC, soit aussi performant qu'un jeu vidéo qui lui peut parler directement à votre PC ?</p>
+        <div id="scene" style="height: 300px; width: 300px; margin: 20px auto;"></div>
+      </section>
+
+      <section>
+        <h3>Comment est-ce que ThreeJS fonctionne ?</h3>
+        <p>La question semble un peu dénuée de sens, mais derrière il y a une vraie interrogation dès que l'on s'intéresse à l'optimisation de code... Et surtout pour un projet aussi grand que ThreeJS.</p>
+        <p>Parce que, les studios de jeux vidéo mettent des mois pour optimiser au maximum leurs jeux alors qu'ils ne sont pas compilés par un navigateur web et en plus ils ont la possibilité de pouvoir communiquer avec la carte graphique ( GPU), ce que les navigateurs ne peuvent faire... Si ?</p>
+
+        <br/>
+        <p>Il y a quelques années, en effet, ce questionnement soulèverait de réelles interrogations, mais depuis 2011, la solution est présente sur la grande majorité des navigateurs.</p>
+        <p>Les navigateurs web d'aujourd'hui ne sont plus ( pour la majorité) les belles voitures des années 90 qui étaient magnifiques pour cacher la médiocrité de leurs moteurs. Grâce à l'évolution du PC moyen, le WebGL a pu être créé en 2011, et les navigateurs peuvent maintenant envoyer des requêtes directement au GPU. Cela veut dire que pour des besoins séparant la logique et le visuel ( comme la 3D), les navigateurs sont maintenant capables de les gérer tout en tournant à plus de 5 fps.</p>
+
+        <img src="./assets/webgl-illustration.gif" style="width: 80%; margin: 20px auto;" />
+      </section>
+
+      <section>
+        <h3>Ok.. Et ?</h3>
+        <p>En effet, ça ne répond pas forcément à la question. En l'état c'est un peu comme si on coder sur PS1... J'aime beaucoup le style graphique de l'époque, mais j'aimerais afficher plus de 3 polygones...</p>
+
+        <p>C'est là que le WebGPU arrive. Il est plus récent et moderne, et a de nombreuses fonctionnalités qui l'élèvent à un tout autre niveau.</p>
+        <p>Premièrement, il est basé sur des API graphiques plus récentes comme Vulkan ou DirectX 13, mais surtout, il est asynchrone, contrairement à WebGL.</p>
+      </section>
+
+      <section>
+        <h3>Qu'est-ce que ça veut dire Asynchrone ?</h3>
+
+        <p>Imaginons que vous êtes dans un aéroport synchrone. Cela voudrait dire que les vols décollerais toujours dans l'ordre premier arrivé, premier partie. Même si un avion au milieu était déjà prêt à partir.</p>
+        <p>Maintenant, imaginons que vous êtes dans un aéroport asynchrone, les avions peuvent partir une fois qu'ils sont prêts, que ce soit le premier, ou un perdu au milieu de la file.</p>
+        <p>Concrètement, ça fluidifie le code et le rend plus performant car il n'a pas à poser d'arrêt, en attendant l'exécution d'une fonction.</p>
+      </section>
+
+      <section> 
+        <h3>C'est tout ce qui rend ThreeJS aussi performant ?</h3>
+
+        <p>Eh bien... théoriquement oui. <br /> L'utilisation du WebGL et WebGPU, et son optimisation avec les fonctions asynchrones, permettent à ThreeJS de se déployer dans les meilleures conditions, mais cela ne fait pas tout. Il y a un énorme travail du côté de leurs développeurs pour se documenter sur les techniques d'optimisation des moteurs graphiques de gros jeux vidéo, comme la compression de texture ou encore la compression des scènes 3D afin de les gérer en un bloc.</p>
+        <p>Mais le point le plus révélateur entre une utilisation de ThreeJS optimisée et une utilisation de ThreeJS est le développeur qui l'utilise. Du même niveau que le développeur dans un studio de jeux vidéo, vous devez utiliser du mieux possible les outils que Three vous dispose afin de rendre votre application performante.</p>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Conclusion: </h3>
+
+      <p>ThreeJS est un moyen moderne et performant d'insérer de la 3D dans vos sites internet, laissant place à votre imagination et votre connaissance de ThreeJS pour offrir à vos utilisateurs la meilleure expérience possible.</p>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
