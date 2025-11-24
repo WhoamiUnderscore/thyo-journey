@@ -1,0 +1,9 @@
+@media screen and (max-width: 767px) {
+  body {
+    margin: 10% 10% !important;
+  }
+
+  img {
+    width: 100% !important;
+  }
+}
