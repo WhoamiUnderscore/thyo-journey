@@ -1,0 +1,8 @@
+pre {
+  background: #dee2e6;
+  border: 2px solid #6c757d;
+  width: 100%;
+  padding: 10px;
+  color: #343a40;
+  white-space: pre-wrap;
+}
